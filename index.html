@@ -13,6 +13,7 @@ img{max-width:100%;display:block}
 .container{width:100%;max-width:1024px;margin:0 auto}
 .grid-3{display:grid;gap:24px}
 @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr);display:grid;gap:16px}}
+.grid-2{display:grid;gap:12px;grid-template-columns:1fr 1fr}
 .hero{position:relative;overflow:hidden;border-bottom:1px solid #262626}
 .hero-img{width:100%;height:340px;object-fit:cover}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#000 0%,rgba(0,0,0,0.6) 50%,transparent 100%)}
@@ -40,7 +41,6 @@ h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
 </style>
 </head>
 <body>
-
 <div class="hero">
   <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop" alt="" class="hero-img" />
   <div class="hero-overlay"></div>
@@ -48,12 +48,10 @@ h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
     <div class="container">
       <span class="badge">Cherry Coffee · Bullhead City Demo Preview</span>
       <h1>Make It Feel<span class="gold"> Impossible To Ignore</span></h1>
-      <p style="color:#d4d4d4;font-size:16px;max-width:576px;margin-top:20px;line-height:1.75;">
-        This is a demo concept showing how it could look with a stronger online presence, cleaner branding, mobile-first design, and better conversion flow.
-      </p>
+      <p style="color:#d4d4d4;font-size:16px;max-width:576px;margin-top:20px;line-height:1.75;">This is a demo concept showing how it could look with a stronger online presence, cleaner branding, mobile-first design, and better conversion flow.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;">
-        <a href="#" class="btn btn-primary">View Demo Strategy</a>
-        <a href="#" class="btn btn-ghost">Request Full Build</a>
+        <a href="#strategy" class="btn btn-primary">View Demo Strategy</a>
+        <a href="#request" class="btn btn-ghost">Request Full Build</a>
       </div>
     </div>
   </div>
@@ -61,22 +59,10 @@ h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
 
 <div class="section" style="background:#0b0b0b;border-bottom:1px solid #262626;">
   <div class="container grid-4">
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
-      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">2026 Ready</div>
-      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Mobile-first branding and customer flow</p>
-    </div>
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
-      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Beginner-Friendly</div>
-      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Easy onboarding and low maintenance</p>
-    </div>
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
-      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">No App Needed</div>
-      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Runs directly from a clean website</p>
-    </div>
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
-      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Local Visibility</div>
-      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Designed to convert nearby traffic</p>
-    </div>
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">2026 Ready</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Mobile-first branding and customer flow</p></div>
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Beginner-Friendly</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Easy onboarding and low maintenance</p></div>
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">No App Needed</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Runs directly from a clean website</p></div>
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Local Visibility</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Designed to convert nearby traffic</p></div>
   </div>
 </div>
 
@@ -92,14 +78,8 @@ h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
           <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Modern Mobile Layout</h3>
           <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">Most people discover coffee spots from their phone first. This layout is built for that.</p>
           <div style="display:flex;gap:12px;margin-top:20px;">
-            <div class="stat-box">
-              <div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div>
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div>
-            </div>
-            <div class="stat-box">
-              <div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div>
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div>
-            </div>
+            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div></div>
+            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div></div>
           </div>
         </div>
       </div>
@@ -111,14 +91,8 @@ h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
           <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Local Brand Positioning</h3>
           <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">The goal is making it feel premium and memorable compared to generic competitors.</p>
           <div style="display:flex;gap:12px;margin-top:20px;">
-            <div class="stat-box">
-              <div style="font-size:18px;font-weight:800;color:#c9a84c;">3/10</div>
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div>
-            </div>
-            <div class="stat-box">
-              <div style="font-size:18px;font-weight:800;color:#c9a84c;">$8k+</div>
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div>
-            </div>
+            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">3/10</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div></div>
+            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">$8k+</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div></div>
           </div>
         </div>
       </div>
@@ -130,14 +104,8 @@ h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
           <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Conversion Focused</h3>
           <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">Clear calls-to-action, map visibility, social proof, and menu presentation all matter.</p>
           <div style="display:flex;gap:12px;margin-top:20px;">
-            <div class="stat-box">
-              <div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div>
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div>
-            </div>
-            <div class="stat-box">
-              <div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div>
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div>
-            </div>
+            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div></div>
+            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div></div>
           </div>
         </div>
       </div>
@@ -150,21 +118,9 @@ h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
     <span class="badge">Example Social Proof</span>
     <h2>What Customers Could Be Saying</h2>
     <div class="grid-3" style="margin-top:40px;">
-      <div class="review-card">
-        <div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div>
-        <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Actually feels modern inside. Drinks came out fast and the vibe was way better than chain coffee places."</p>
-        <div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Taylor</div>
-      </div>
-      <div class="review-card">
-        <div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div>
-        <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Saw them on my phone while searching nearby and decided to try it. Ended up staying almost two hours."</p>
-        <div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Jordan</div>
-      </div>
-      <div class="review-card">
-        <div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div>
-        <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Good branding, clean atmosphere, and way easier to notice online now."</p>
-        <div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Avery</div>
-      </div>
+      <div class="review-card"><div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div><p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Actually feels modern inside. Drinks came out fast and the vibe was way better than chain coffee places."</p><div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Taylor</div></div>
+      <div class="review-card"><div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div><p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Saw them on my phone while searching nearby and decided to try it. Ended up staying almost two hours."</p><div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Jordan</div></div>
+      <div class="review-card"><div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div><p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Good branding, clean atmosphere, and way easier to notice online now."</p><div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Avery</div></div>
     </div>
   </div>
 </div>
