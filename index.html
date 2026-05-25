@@ -3,154 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cherry Coffee | Bullhead City Demo</title>
+<title>Cherry Coffee Cafe | Digital Positioning</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;color:#fff;font-family:system-ui,-apple-system,sans-serif;line-height:1.65;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{background:#000;color:#fff;font-family:system-ui,-apple-system,sans-serif;line-height:1.7;overflow-x:hidden}
 img{max-width:100%;display:block}
+a{color:#c9a84c;text-decoration:none}
 .section{padding:64px 24px}
-@media(min-width:768px){.section{padding:64px 40px}}
-.container{width:100%;max-width:1024px;margin:0 auto}
-.grid-3{display:grid;gap:24px}
-@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr);display:grid;gap:16px}}
-.grid-2{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(min-width:768px){.section{padding:72px 40px}}
+.container{width:100%;max-width:980px;margin:0 auto}
+.badge{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.3em;color:#c9a84c;margin-bottom:18px}
+h2{font-size:28px;line-height:1.12;font-weight:800;margin-bottom:18px}
+@media(min-width:768px){h2{font-size:44px}}
+h3{font-size:20px;font-weight:800;margin:34px 0 14px}
+h4{font-size:16px;font-weight:800;margin:26px 0 12px}
+p{color:#d1d1d1;margin:0 0 16px}
+ul,ol{color:#d1d1d1;padding-left:22px;margin:0 0 18px}
+li{margin:10px 0}
+strong{color:#fff}
+.refs{font-size:12px;color:#a3a3a3;margin-top:28px}
+hr{border:none;border-top:1px solid #222;margin:28px 0}
 .hero{position:relative;overflow:hidden;border-bottom:1px solid #262626}
-.hero-img{width:100%;height:340px;object-fit:cover}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#000 0%,rgba(0,0,0,0.6) 50%,transparent 100%)}
+.hero-img{width:100%;height:320px;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#000 0%,rgba(0,0,0,0.62) 55%,transparent 100%)}
 .hero-content{position:absolute;bottom:0;left:0;right:0;padding:24px}
 @media(min-width:768px){.hero-content{padding:40px}}
-.badge{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.35em;color:#c9a84c;margin-bottom:16px;display:block}
-h1{font-size:36px;font-weight:800;line-height:1;color:#fff}
-@media(min-width:768px){h1{font-size:60px}}
-h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
-@media(min-width:768px){h2{font-size:48px}}
-.btn{display:inline-block;border-radius:16px;padding:12px 24px;font-size:14px;font-weight:800;cursor:pointer;border:none;text-decoration:none}
+.hero h1{font-size:34px;line-height:1;font-weight:900;max-width:760px}
+@media(min-width:768px){.hero h1{font-size:58px}}
+.gold{color:#c9a84c}
+.sub{color:#d4d4d4;max-width:620px;margin-top:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;border-radius:16px;padding:12px 22px;font-size:14px;font-weight:800}
 .btn-primary{background:#c9a84c;color:#000}
 .btn-ghost{background:transparent;border:1px solid #c9a84c;color:#c9a84c}
-.tag-wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
-.cta-box{border-radius:36px;border:1px solid #262626;background:#141414;padding:32px;text-align:center}
-@media(min-width:768px){.cta-box{padding:56px}}
-.card{border-radius:28px;border:1px solid #262626;background:#141414;overflow:hidden}
-.card-content{padding:20px}
-.stat-box{border-radius:16px;background:#1d1d1d;padding:12px 16px}
-.review-card{border-radius:28px;border:1px solid #262626;background:#141414;padding:24px;margin-bottom:16px}
-.sticky-footer{position:fixed;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.95);border-top:1px solid #262626;padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px;font-weight:700;backdrop-filter:blur(8px);z-index:999}
-.gold{color:#c9a84c}
-.muted{color:#a3a3a3}
-.dim{color:#737373}
+.grid-4{display:grid;gap:16px}
+@media(min-width:768px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+.stat{border:1px solid #262626;background:#141414;border-radius:24px;padding:18px}
+.stat .k{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#c9a84c;font-weight:800;margin-bottom:10px}
+.stat .v{font-size:14px;color:#a3a3a3;line-height:1.55}
+.callbar{position:fixed;bottom:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.95);border-top:1px solid #262626;padding:12px 16px;display:flex;justify-content:center;gap:10px;align-items:center;font-size:13px;font-weight:700;backdrop-filter:blur(8px)}
+.callbar span{color:#737373}
+.callbar a{color:#c9a84c}
+.spacer{height:60px}
 </style>
 </head>
 <body>
+
 <div class="hero">
-  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop" alt="" class="hero-img" />
+  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop" alt="" class="hero-img">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="container">
-      <span class="badge">Cherry Coffee · Bullhead City Demo Preview</span>
-      <h1>Make It Feel<span class="gold"> Impossible To Ignore</span></h1>
-      <p style="color:#d4d4d4;font-size:16px;max-width:576px;margin-top:20px;line-height:1.75;">This is a demo concept showing how it could look with a stronger online presence, cleaner branding, mobile-first design, and better conversion flow.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;">
-        <a href="#strategy" class="btn btn-primary">View Demo Strategy</a>
-        <a href="#request" class="btn btn-ghost">Request Full Build</a>
+      <span class="badge">Digital Audit & Strategic Pitch</span>
+      <h1>Cherry Coffee Cafe Digital Positioning:<span class="gold"> Bullhead City, Arizona</span></h1>
+      <p class="sub">A mobile-first digital demo focused on stronger visibility, better customer flow, and a cleaner pitch for website development and Google Business Profile optimization.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#audit">View Digital Audit</a>
+        <a class="btn btn-ghost" href="#pitch">View Strategic Pitch</a>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="section" style="background:#0b0b0b;border-bottom:1px solid #262626;">
-  <div class="container grid-4">
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">2026 Ready</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Mobile-first branding and customer flow</p></div>
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Beginner-Friendly</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Easy onboarding and low maintenance</p></div>
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">No App Needed</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Runs directly from a clean website</p></div>
-    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;"><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Local Visibility</div><p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Designed to convert nearby traffic</p></div>
-  </div>
-</div>
-
-<div class="section">
-  <div class="container">
-    <span class="badge">Demo Features</span>
-    <h2 style="max-width:640px;">A Cleaner Experience =<span class="gold"> More Customers Walking In</span></h2>
-    <div class="grid-3" style="margin-top:40px;">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:192px;object-fit:cover;display:block;" />
-        <div class="card-content">
-          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:#c9a84c;margin-bottom:8px;">PATH 01</div>
-          <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Modern Mobile Layout</h3>
-          <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">Most people discover coffee spots from their phone first. This layout is built for that.</p>
-          <div style="display:flex;gap:12px;margin-top:20px;">
-            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div></div>
-            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:192px;object-fit:cover;display:block;" />
-        <div class="card-content">
-          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:#c9a84c;margin-bottom:8px;">PATH 02</div>
-          <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Local Brand Positioning</h3>
-          <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">The goal is making it feel premium and memorable compared to generic competitors.</p>
-          <div style="display:flex;gap:12px;margin-top:20px;">
-            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">3/10</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div></div>
-            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">$8k+</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:192px;object-fit:cover;display:block;" />
-        <div class="card-content">
-          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:#c9a84c;margin-bottom:8px;">PATH 03</div>
-          <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Conversion Focused</h3>
-          <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">Clear calls-to-action, map visibility, social proof, and menu presentation all matter.</p>
-          <div style="display:flex;gap:12px;margin-top:20px;">
-            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div></div>
-            <div class="stat-box"><div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section" style="background:#0a0a0a;border-top:1px solid #262626;border-bottom:1px solid #262626;">
-  <div class="container">
-    <span class="badge">Example Social Proof</span>
-    <h2>What Customers Could Be Saying</h2>
-    <div class="grid-3" style="margin-top:40px;">
-      <div class="review-card"><div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div><p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Actually feels modern inside. Drinks came out fast and the vibe was way better than chain coffee places."</p><div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Taylor</div></div>
-      <div class="review-card"><div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div><p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Saw them on my phone while searching nearby and decided to try it. Ended up staying almost two hours."</p><div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Jordan</div></div>
-      <div class="review-card"><div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div><p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Good branding, clean atmosphere, and way easier to notice online now."</p><div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Avery</div></div>
     </div>
   </div>
 </div>
 
 <div class="section">
   <div class="container">
-    <div class="cta-box">
-      <span class="badge">Limited Demo Build</span>
-      <h2 style="max-width:640px;margin:0 auto;">This Is The Preview Version —<span class="gold"> Not The Full System</span></h2>
-      <p style="color:#a3a3a3;font-size:16px;line-height:2;max-width:640px;margin:24px auto 0;">The initial build focuses on a modern landing page, branding, customer conversion flow, and local visibility strategy. More advanced systems like ordering, memberships, loyalty apps, or custom integrations would come later.</p>
-      <div class="tag-wrap">
-        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">Zero Overhead</span>
-        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">2026 Style</span>
-        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">Fast Deployment</span>
-        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">Mobile Optimized</span>
-      </div>
-      <button class="btn btn-primary" style="margin-top:40px;font-size:14px;padding:16px 32px;">Continue With Full Build</button>
+    <div class="grid-4">
+      <div class="stat"><div class="k">Location</div><div class="v">2580 AZ-95 #106, Bullhead City, AZ 86442</div></div>
+      <div class="stat"><div class="k">Phone</div><div class="v">(928) 404-5530</div></div>
+      <div class="stat"><div class="k">Website</div><div class="v"><a href="https://cherrycoffeelab.com" target="_blank">cherrycoffeelab.com</a></div></div>
+      <div class="stat"><div class="k">Social</div><div class="v">@cherrycoffeecafe / @cherrycoffeelab</div></div>
     </div>
   </div>
 </div>
 
-<div class="sticky-footer">
-  <span>📞</span>
-  <a href="tel:9285550142" style="color:#c9a84c;font-weight:800;text-decoration:none;">(928) 555-0142</a>
-  <span style="color:#262626;">|</span>
-  <span style="color:#737373;">Free Quotes</span>
-  <span style="color:#262626;">|</span>
-  <span style="color:#737373;">Open Now</span>
+<div class="section" id="audit">
+  <div class="container">
+    <span class="badge">Current Online Presence Assessment</span>
+    <h2>Cherry Coffee Cafe has a strong foundation already.</h2>
+    <p>
+      Cherry Coffee Cafe has established a solid foundation for its digital presence, demonstrating a clear understanding of essential local business requirements.
+    </p>
+    <p>
+      The cafe's physical location at <strong>2580 AZ-95 #106, Bullhead City, AZ 86442</strong>, is well-defined, complete with operational hours from Monday to Friday, 7 am to 4 pm, and on Saturdays and Sundays from 8 am to 2 pm. The direct phone number, <strong>(928) 404-5530</strong>, serves as a crucial point of contact, forming the bedrock of its Name, Address, and Phone (NAP) consistency, a vital component for local search engine optimization.
+    </p>
+    <p>
+      Their online hub, <a href="https://cherrycoffeelab.com" target="_blank">cherrycoffeelab.com</a>, signifies a commitment to a dedicated digital storefront. This website serves as a central point for brand information and customer interaction.
+    </p>
+    <p>
+      Social media engagement is robust, with active presences on Instagram (<a href="https://instagram.com/cherrycoffeecafe" target="_blank">@cherrycoffeecafe</a>) and TikTok (<a href="https://tiktok.com/@cherrycoffeelab" target="_blank">@cherrycoffeelab</a>), alongside Facebook. The content strategy effectively highlights unique offerings, from the much-touted "crazy drink orders" and specialty beverages like the Cookie Butter, Nutty Irishman, and Cherry Bomb, to a diverse range of matcha options and appealing food items such as bagels, pastries, and acai bowls. Notably, the promotion of their own roasted beans from Cherry Coffee Lab and house-made syrups underscores a commitment to quality and in-house expertise. Recent activity on TikTok, observed in May 2026, indicates a dynamic and current engagement strategy.
+    </p>
+    <p>
+      Convenience is further amplified through their partnership with DoorDash, facilitating delivery and takeout services, thereby broadening their reach and accessibility. Customer interaction is actively encouraged through social media, with direct calls or texts for pickup orders being a prime example of their proactive approach to service.
+    </p>
+  </div>
 </div>
 
-<div style="height:60px;"></div>
+<div class="section" id="pitch">
+  <div class="container">
+    <span class="badge">Strategic Pitch</span>
+    <h2>Website and GBP can move them from visible to dominant.</h2>
+    <p>
+      To elevate Cherry Coffee Cafe from a commendable online presence to a dominant local digital force, a targeted strategy focusing on their Google Business Profile and website is paramount. These enhancements are designed to amplify visibility, deepen customer engagement, and ultimately drive increased foot traffic and sales.
+    </p>
+
+    <h3>Google Business Profile Optimization</h3>
+    <p>
+      The GBP stands as Cherry Coffee Cafe's most critical local SEO asset. Maximizing its potential will ensure prominent placement in Google Search and Maps for relevant local queries.
+    </p>
+    <ul>
+      <li>Complete every GBP field: business name, address, phone numbers, website, and direct online ordering links.</li>
+      <li>Write a compelling, keyword-optimized business description highlighting unique selling points.</li>
+      <li>Use <strong>Coffee Shop</strong> as the primary category, and add secondary categories like Cafe, Breakfast Restaurant, and Juice Shop.</li>
+      <li>Upload 100+ diverse, high-quality photos with descriptive, keyworded filenames.</li>
+      <li>Use <strong>Google Posts</strong> weekly for specials and events, each with a clear call-to-action.</li>
+      <li>Add relevant attributes such as outdoor seating, free Wi-Fi, vegan options, and good for groups.</li>
+      <li>Proactively manage reviews and respond graciously, especially to critical feedback.</li>
+    </ul>
+
+    <h3>Website Development & Optimization</h3>
+    <p>
+      While social media excels at engagement, the website serves as the authoritative digital storefront, pivotal for converting interest into loyal patronage.
+    </p>
+    <ul>
+      <li><strong>Mobile-first design:</strong> rapid loading, responsive layout, easy click-to-call and map directions.</li>
+      <li><strong>Local content:</strong> maintain a blog with Bullhead City-oriented posts and use high-value local keywords.</li>
+      <li><strong>Direct online ordering</strong> for better control and profits alongside DoorDash.</li>
+      <li><strong>Structured data:</strong> implement LocalBusiness and Cafe schema for richer search results.</li>
+      <li><strong>Technical SEO:</strong> submit an XML sitemap, ensure HTTPS, and compress images for speed.</li>
+    </ul>
+
+    <h3>Integrated Social Media Strategy</h3>
+    <ul>
+      <li>Keep consistent location tagging on Instagram and TikTok, and encourage customer tagging.</li>
+      <li>Use Facebook Events for promotions, menu launches, and community gatherings.</li>
+      <li>Continue dynamic TikTok stories with location hashtags like <strong>#BullheadCityCoffee</strong>.</li>
+    </ul>
+
+    <p>
+      By strategically enhancing their Google Business Profile and website, Cherry Coffee Cafe can significantly amplify its online presence, attract more local customers, and firmly establish itself as Bullhead City’s <strong>caffeine destination of choice</strong>.
+    </p>
+
+    <div class="refs">
+      <strong>References:</strong>
+      <ol>
+        <li>SEO and technical optimization guidance aligns with Google Business Profile best practices and cafe local SEO advice [web:291][web:292][web:293].</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="callbar">
+  <span>📞</span><a href="tel:9284045530">(928) 404-5530</a><span>|</span><span>Free Quotes</span><span>|</span><span>Open Now</span>
+</div>
+<div class="spacer"></div>
 </body>
 </html>
