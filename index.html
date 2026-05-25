@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cherry Coffee | Bullhead City Demo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#fff;font-family:system-ui,-apple-system,sans-serif;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+.section{padding:64px 24px}
+@media(min-width:768px){.section{padding:64px 40px}}
+.container{width:100%;max-width:1024px;margin:0 auto}
+.grid-3{display:grid;gap:24px}
+@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr);display:grid;gap:16px}}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid #262626}
+.hero-img{width:100%;height:340px;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#000 0%,rgba(0,0,0,0.6) 50%,transparent 100%)}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:24px}
+@media(min-width:768px){.hero-content{padding:40px}}
+.badge{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.35em;color:#c9a84c;margin-bottom:16px;display:block}
+h1{font-size:36px;font-weight:800;line-height:1;color:#fff}
+@media(min-width:768px){h1{font-size:60px}}
+h2{font-size:30px;font-weight:800;line-height:1.1;color:#fff}
+@media(min-width:768px){h2{font-size:48px}}
+.btn{display:inline-block;border-radius:16px;padding:12px 24px;font-size:14px;font-weight:800;cursor:pointer;border:none;text-decoration:none}
+.btn-primary{background:#c9a84c;color:#000}
+.btn-ghost{background:transparent;border:1px solid #c9a84c;color:#c9a84c}
+.tag-wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+.cta-box{border-radius:36px;border:1px solid #262626;background:#141414;padding:32px;text-align:center}
+@media(min-width:768px){.cta-box{padding:56px}}
+.card{border-radius:28px;border:1px solid #262626;background:#141414;overflow:hidden}
+.card-content{padding:20px}
+.stat-box{border-radius:16px;background:#1d1d1d;padding:12px 16px}
+.review-card{border-radius:28px;border:1px solid #262626;background:#141414;padding:24px;margin-bottom:16px}
+.sticky-footer{position:fixed;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.95);border-top:1px solid #262626;padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px;font-weight:700;backdrop-filter:blur(8px);z-index:999}
+.gold{color:#c9a84c}
+.muted{color:#a3a3a3}
+.dim{color:#737373}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop" alt="" class="hero-img" />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="container">
+      <span class="badge">Cherry Coffee · Bullhead City Demo Preview</span>
+      <h1>Make It Feel<span class="gold"> Impossible To Ignore</span></h1>
+      <p style="color:#d4d4d4;font-size:16px;max-width:576px;margin-top:20px;line-height:1.75;">
+        This is a demo concept showing how it could look with a stronger online presence, cleaner branding, mobile-first design, and better conversion flow.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;">
+        <a href="#" class="btn btn-primary">View Demo Strategy</a>
+        <a href="#" class="btn btn-ghost">Request Full Build</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background:#0b0b0b;border-bottom:1px solid #262626;">
+  <div class="container grid-4">
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">2026 Ready</div>
+      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Mobile-first branding and customer flow</p>
+    </div>
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Beginner-Friendly</div>
+      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Easy onboarding and low maintenance</p>
+    </div>
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">No App Needed</div>
+      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Runs directly from a clean website</p>
+    </div>
+    <div style="border-radius:24px;border:1px solid #262626;background:#141414;padding:20px;">
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.25em;color:#c9a84c;margin-bottom:12px;">Local Visibility</div>
+      <p style="font-size:14px;line-height:1.6;color:#a3a3a3;margin:0;">Designed to convert nearby traffic</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <span class="badge">Demo Features</span>
+    <h2 style="max-width:640px;">A Cleaner Experience =<span class="gold"> More Customers Walking In</span></h2>
+    <div class="grid-3" style="margin-top:40px;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:192px;object-fit:cover;display:block;" />
+        <div class="card-content">
+          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:#c9a84c;margin-bottom:8px;">PATH 01</div>
+          <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Modern Mobile Layout</h3>
+          <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">Most people discover coffee spots from their phone first. This layout is built for that.</p>
+          <div style="display:flex;gap:12px;margin-top:20px;">
+            <div class="stat-box">
+              <div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div>
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div>
+            </div>
+            <div class="stat-box">
+              <div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div>
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:192px;object-fit:cover;display:block;" />
+        <div class="card-content">
+          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:#c9a84c;margin-bottom:8px;">PATH 02</div>
+          <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Local Brand Positioning</h3>
+          <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">The goal is making it feel premium and memorable compared to generic competitors.</p>
+          <div style="display:flex;gap:12px;margin-top:20px;">
+            <div class="stat-box">
+              <div style="font-size:18px;font-weight:800;color:#c9a84c;">3/10</div>
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div>
+            </div>
+            <div class="stat-box">
+              <div style="font-size:18px;font-weight:800;color:#c9a84c;">$8k+</div>
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:192px;object-fit:cover;display:block;" />
+        <div class="card-content">
+          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:#c9a84c;margin-bottom:8px;">PATH 03</div>
+          <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0;">Conversion Focused</h3>
+          <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin-top:12px;">Clear calls-to-action, map visibility, social proof, and menu presentation all matter.</p>
+          <div style="display:flex;gap:12px;margin-top:20px;">
+            <div class="stat-box">
+              <div style="font-size:18px;font-weight:800;color:#c9a84c;">2/10</div>
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Difficulty</div>
+            </div>
+            <div class="stat-box">
+              <div style="font-size:18px;font-weight:800;color:#c9a84c;">$5k+</div>
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">Potential</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background:#0a0a0a;border-top:1px solid #262626;border-bottom:1px solid #262626;">
+  <div class="container">
+    <span class="badge">Example Social Proof</span>
+    <h2>What Customers Could Be Saying</h2>
+    <div class="grid-3" style="margin-top:40px;">
+      <div class="review-card">
+        <div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div>
+        <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Actually feels modern inside. Drinks came out fast and the vibe was way better than chain coffee places."</p>
+        <div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Taylor</div>
+      </div>
+      <div class="review-card">
+        <div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div>
+        <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Saw them on my phone while searching nearby and decided to try it. Ended up staying almost two hours."</p>
+        <div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Jordan</div>
+      </div>
+      <div class="review-card">
+        <div style="color:#c9a84c;font-size:14px;letter-spacing:0.25em;margin-bottom:16px;">★★★★★</div>
+        <p style="font-size:14px;line-height:1.75;color:#a3a3a3;margin:0;">"Good branding, clean atmosphere, and way easier to notice online now."</p>
+        <div style="margin-top:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#737373;">— Avery</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="cta-box">
+      <span class="badge">Limited Demo Build</span>
+      <h2 style="max-width:640px;margin:0 auto;">This Is The Preview Version —<span class="gold"> Not The Full System</span></h2>
+      <p style="color:#a3a3a3;font-size:16px;line-height:2;max-width:640px;margin:24px auto 0;">The initial build focuses on a modern landing page, branding, customer conversion flow, and local visibility strategy. More advanced systems like ordering, memberships, loyalty apps, or custom integrations would come later.</p>
+      <div class="tag-wrap">
+        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">Zero Overhead</span>
+        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">2026 Style</span>
+        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">Fast Deployment</span>
+        <span style="border-radius:9999px;border:1px solid #404040;padding:8px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#a3a3a3;">Mobile Optimized</span>
+      </div>
+      <button class="btn btn-primary" style="margin-top:40px;font-size:14px;padding:16px 32px;">Continue With Full Build</button>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-footer">
+  <span>📞</span>
+  <a href="tel:9285550142" style="color:#c9a84c;font-weight:800;text-decoration:none;">(928) 555-0142</a>
+  <span style="color:#262626;">|</span>
+  <span style="color:#737373;">Free Quotes</span>
+  <span style="color:#262626;">|</span>
+  <span style="color:#737373;">Open Now</span>
+</div>
+
+<div style="height:60px;"></div>
+</body>
+</html>
